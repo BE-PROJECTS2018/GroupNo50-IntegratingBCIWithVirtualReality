@@ -15,6 +15,7 @@ public class PortalSliderInc : MonoBehaviour {
         ps = transform.Find("Portal/Circle (1)").gameObject.GetComponent<ParticleSystem>();
         
         Go = GameObject.FindGameObjectWithTag("Connector");
+        Debug.Log(Go);
     }
 
     // Update is called once per frame
@@ -24,7 +25,7 @@ public class PortalSliderInc : MonoBehaviour {
         {
            
             attentionlevel = Go.GetComponent<NeuroskyConn>().attention;
-
+            Debug.Log(attentionlevel);
             transform.Find("Text").gameObject.GetComponent<Text>().text = ("Attention: " + attentionlevel + "\n");
             //"Meditation: " + myConn.meditation.ToString() + "\n" +
             //"Blink:" + myConn.blink.ToString());
@@ -69,11 +70,20 @@ public class PortalSliderInc : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
+        {
             PlayerEntered = true;
+            SliderVal = 0;
+            var main = ps.main;
+            main.simulationSpeed = 2f;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player") {
             PlayerEntered = false;
+            SliderVal = 0;
+            var main = ps.main;
+            main.simulationSpeed = 2f;
+        }
     }
 }

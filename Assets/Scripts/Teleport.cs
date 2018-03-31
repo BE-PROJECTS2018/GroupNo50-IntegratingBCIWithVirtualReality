@@ -46,7 +46,7 @@ public class Teleport : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(portal_Y2);
+        
     }
     // Update is called once per frame
     void OnTriggerStay(Collider other)
@@ -60,18 +60,23 @@ public class Teleport : MonoBehaviour
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 1)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x - 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 2)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x + 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 3)
                 {
+                 
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z - 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 4)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z + 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
             }
 
@@ -87,18 +92,22 @@ public class Teleport : MonoBehaviour
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 1)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x - 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 2)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x + 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 3)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z - 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 4)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z + 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
             }
 
@@ -114,18 +123,22 @@ public class Teleport : MonoBehaviour
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 1)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x - 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 2)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x + 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 3)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z - 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 4)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z + 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
             }
             other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
@@ -141,18 +154,22 @@ public class Teleport : MonoBehaviour
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 1)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x - 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 2)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x + 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 3)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z - 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 4)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z + 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 //StopPortal();
             }
@@ -169,18 +186,22 @@ public class Teleport : MonoBehaviour
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 1)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x - 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 2)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x + 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 3)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z - 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 4)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z + 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
             }
 
@@ -196,18 +217,22 @@ public class Teleport : MonoBehaviour
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 1)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x - 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 2)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x + 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 3)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z - 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 4)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z + 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
             }
 
@@ -223,18 +248,22 @@ public class Teleport : MonoBehaviour
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 1)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x - 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 2)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x + 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 3)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z - 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 4)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z + 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
             }
 
@@ -250,18 +279,22 @@ public class Teleport : MonoBehaviour
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 1)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x - 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 2)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x + 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 3)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z - 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 4)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z + 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
             }
 
@@ -277,18 +310,22 @@ public class Teleport : MonoBehaviour
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 1)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x - 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 2)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x + 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 3)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z - 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 4)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z + 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
             }
 
@@ -306,18 +343,22 @@ public class Teleport : MonoBehaviour
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 1)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x - 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 2)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x + 1.0f, 0.49f, GO.transform.parent.gameObject.transform.position.z);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 3)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z - 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
                 if (GO.transform.parent.gameObject.GetComponent<PortalDirectionIdentifier>().direction == 4)
                 {
                     transform.position = new Vector3(GO.transform.parent.gameObject.transform.position.x, 0.49f, GO.transform.parent.gameObject.transform.position.z + 1.0f);
+                    other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
                 }
             }
 

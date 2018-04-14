@@ -61,6 +61,7 @@ public class Shooter : MonoBehaviour {
             {
                 Debug.Log("Hitmonster");
                 hit.transform.gameObject.GetComponent<MonsterAttack>().TakeDamage(ShootDamage);
+                GetComponent<SoundManager>().ShootSound();
             }
         }
     }

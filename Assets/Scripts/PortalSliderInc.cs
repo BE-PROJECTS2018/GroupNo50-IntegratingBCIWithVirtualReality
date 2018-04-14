@@ -9,11 +9,12 @@ public class PortalSliderInc : MonoBehaviour {
     public bool PlayerEntered = false;
     [SerializeField] int SliderVal = 0;
     ParticleSystem ps;
+    GameObject Player;
     // Use this for initialization
     void Start () {
        
         ps = transform.Find("Portal/Circle (1)").gameObject.GetComponent<ParticleSystem>();
-        
+
         Go = GameObject.FindGameObjectWithTag("Connector");
         Debug.Log(Go);
     }
@@ -23,7 +24,7 @@ public class PortalSliderInc : MonoBehaviour {
     {
         if (PlayerEntered)
         {
-           
+
             attentionlevel = Go.GetComponent<NeuroskyConn>().attention;
             Debug.Log(attentionlevel);
             transform.Find("Text").gameObject.GetComponent<Text>().text = ("Attention: " + attentionlevel + "\n");
@@ -40,26 +41,31 @@ public class PortalSliderInc : MonoBehaviour {
             {
                 var main = ps.main;
                 main.simulationSpeed = 2.25f;
+               Player.GetComponent<SoundManager>().PortalSound(3.2f);
             }
             if (SliderVal > 200)
             {
                 var main = ps.main;
                 main.simulationSpeed = 2.5f;
+                Player.GetComponent<SoundManager>().PortalSound(3.4f);
             }
             if (SliderVal > 300)
             {
                 var main = ps.main;
                 main.simulationSpeed = 2.75f;
+                Player.GetComponent<SoundManager>().PortalSound(3.6f);
             }
             if (SliderVal > 400)
             {
                 var main = ps.main;
                 main.simulationSpeed = 3.25f;
+                Player.GetComponent<SoundManager>().PortalSound(3.8f);
             }
             if (SliderVal == 500)
             {
                 var main = ps.main;
                 main.simulationSpeed = 4f;
+                Player.GetComponent<SoundManager>().PortalSound(4f);
             }
             transform.Find("Slider").gameObject.GetComponent<Slider>().value = SliderVal;
         }
@@ -72,9 +78,11 @@ public class PortalSliderInc : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             PlayerEntered = true;
+            Player = other.gameObject;
             SliderVal = 0;
             var main = ps.main;
             main.simulationSpeed = 2f;
+            Player.GetComponent<SoundManager>().PortalSound(3f);
         }
     }
     private void OnTriggerExit(Collider other)

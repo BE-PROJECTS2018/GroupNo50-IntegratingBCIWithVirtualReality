@@ -22,7 +22,8 @@ public class Teleport : MonoBehaviour
     void Start ()
     {
         portal_Or1 = GameObject.FindGameObjectWithTag("Orange_1").transform.Find("Portal").gameObject;
-        portal_Or2=GameObject.FindGameObjectWithTag("Orange_2").transform.Find("Portal").gameObject;
+
+        portal_Or2 = GameObject.FindGameObjectWithTag("Orange_2").transform.Find("Portal").gameObject;
         portal_B1 = GameObject.FindGameObjectWithTag("Blue_1").transform.Find("Portal").gameObject;
         portal_B2 = GameObject.FindGameObjectWithTag("Blue_2").transform.Find("Portal").gameObject;
         portal_G1 = GameObject.FindGameObjectWithTag("Green_1").transform.Find("Portal").gameObject;
@@ -46,7 +47,10 @@ public class Teleport : MonoBehaviour
     }
     private void Update()
     {
-        
+        if (GetComponent<Shooter>().isAlive && !(GameObject.Find("Timer").GetComponent<Timer>().timeup))
+        {
+            Debug.Log("Playing");
+        }
     }
     // Update is called once per frame
     void OnTriggerStay(Collider other)
@@ -174,8 +178,8 @@ public class Teleport : MonoBehaviour
                 //StopPortal();
             }
 
-            other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
-        }
+        other.gameObject.transform.Find("Slider").GetComponent<Slider>().value = 0;
+    }
 
         if (other.gameObject.tag == "Red_1")
         {

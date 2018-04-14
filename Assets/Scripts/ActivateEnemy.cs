@@ -10,6 +10,7 @@ public class ActivateEnemy : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             PlayerEntered = true;
+            transform.Find("Cube").gameObject.SetActive(true);
         }
     }
 }

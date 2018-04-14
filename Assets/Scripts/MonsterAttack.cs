@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MonsterAttack : MonoBehaviour {
-
+    
     public const string IDLE = "Anim_Idle";
     public const string RUN = "Anim_Run";
     public const string ATTACK = "Anim_Attack";
@@ -36,18 +36,13 @@ public class MonsterAttack : MonoBehaviour {
         {
             
             PlayerEntered = GameObject.Find("TriggerEnemy").GetComponent<ActivateEnemy>().PlayerEntered;
-            if (transform.eulerAngles.y > 180 || transform.eulerAngles.y<0)
-            {
-                speed = -speed;
-            }
-            if (transform.eulerAngles.y < 180)
-            {
-                speed = speed;
-            }
+           
+           
             if (PlayerEntered && !MetPlayer && !TakingDamage)
             {
                 anim.CrossFade(RUN);
-
+                Debug.Log("Chasing");
+                GetComponent<MonsterSoundManager>().ChaseSound();
                 transform.position = new Vector3(transform.position.x + speed, transform.position.y, transform.position.z);
             }
             if (PlayerEntered && !MetPlayer && TakingDamage)
@@ -64,7 +59,7 @@ public class MonsterAttack : MonoBehaviour {
                 if (Time.time - AttackTimeUpdate > 1f)
                 {
                     AttackTimeUpdate = Time.time;
-
+                    GetComponent<MonsterSoundManager>().AttackSound();
                     anim.CrossFade(ATTACK);
                     DamagePlayer(DealDamage);
                 }
@@ -76,7 +71,7 @@ public class MonsterAttack : MonoBehaviour {
         if (!isAlive && !deathAnimationplayed)
         {
             anim.CrossFade(DEATH);
-
+            GetComponent<MonsterSoundManager>().DieSound();
             deathAnimationplayed = true;
             DeathTimeUpdate = Time.time;
             

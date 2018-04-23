@@ -41,31 +41,31 @@ public class PortalSliderInc : MonoBehaviour {
             {
                 var main = ps.main;
                 main.simulationSpeed = 2.25f;
-               Player.GetComponent<SoundManager>().PortalSound(3.2f);
+               //Player.GetComponent<SoundManager>().PortalSound(3.2f);
             }
             if (SliderVal > 200)
             {
                 var main = ps.main;
                 main.simulationSpeed = 2.5f;
-                Player.GetComponent<SoundManager>().PortalSound(3.4f);
+                //Player.GetComponent<SoundManager>().PortalSound(3.4f);
             }
             if (SliderVal > 300)
             {
                 var main = ps.main;
                 main.simulationSpeed = 2.75f;
-                Player.GetComponent<SoundManager>().PortalSound(3.6f);
+                //Player.GetComponent<SoundManager>().PortalSound(3.6f);
             }
             if (SliderVal > 400)
             {
                 var main = ps.main;
                 main.simulationSpeed = 3.25f;
-                Player.GetComponent<SoundManager>().PortalSound(3.8f);
+                //Player.GetComponent<SoundManager>().PortalSound(3.8f);
             }
             if (SliderVal == 500)
             {
                 var main = ps.main;
                 main.simulationSpeed = 4f;
-                Player.GetComponent<SoundManager>().PortalSound(4f);
+                //Player.GetComponent<SoundManager>().PortalSound(4f);
             }
             transform.Find("Slider").gameObject.GetComponent<Slider>().value = SliderVal;
         }

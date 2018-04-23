@@ -12,8 +12,14 @@ public class GameEnd : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             GameEnded = true;
-            transform.Find("Text").GetComponent<Text>().text = "You finished the game with " + GameObject.Find("Timer").GetComponent<Timer>().timer + "seconds remaining";
-            
+            if (GameObject.Find("Timer").GetComponent<Timer>().timer > 0)
+            {
+                transform.Find("Text").GetComponent<Text>().text = "You finished the game with " + GameObject.Find("Timer").GetComponent<Timer>().timer + "seconds remaining";
+            }
+            else if (GameObject.Find("Timer").GetComponent<Timer>().timer == 0)
+            {
+                transform.Find("Text").GetComponent<Text>().text = "You ran out of time! Better luck next time!";
+            }
         }
     }
 }
